@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Hardening & Privacy Audit Hub — 15-Point Windows Security Cockpit</title>
+  <meta name="description" content="Free interactive Windows PC hardening & privacy checklist. Audit telemetry, DNS leaks, ransomware defense, and generate remediation scripts.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Header with Dynamic Scorecard -->
+    <header class="app-header">
+      <div class="header-main">
+        <div class="brand">
+          <span class="badge-shield">SEC//OPS</span>
+          <h1>PC Hardening & Privacy Audit Hub</h1>
+        </div>
+        <p class="tagline">Interactive 15-Point Windows Defense, Telemetry Audit & Remediation Cockpit</p>
+      </div>
+
+      <!-- Live Hardening Score Card -->
+      <div class="score-card">
+        <div class="score-circle">
+          <span id="scoreNumber" class="score-num">0</span>
+          <span class="score-max">/100</span>
+        </div>
+        <div class="score-details">
+          <span class="score-label">DEFENSE RATING:</span>
+          <span id="riskBadge" class="risk-badge risk-high">CRITICAL EXPOSURE</span>
+          <p id="scoreHint" class="score-hint">Complete the 15 security checks below to harden your PC.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filter Bar & Actions -->
+    <div class="toolbar">
+      <div class="filter-pills">
+        <button class="filter-btn active" data-filter="all">All Checks (15)</button>
+        <button class="filter-btn" data-filter="telemetry">OS Telemetry</button>
+        <button class="filter-btn" data-filter="network">Network & DNS</button>
+        <button class="filter-btn" data-filter="malware">Malware Defense</button>
+        <button class="filter-btn" data-filter="backup">Backup & Recovery</button>
+      </div>
+      <div class="toolbar-actions">
+        <button id="copyRemediationBtn" class="btn btn-secondary">📋 Copy Fix Script</button>
+        <button id="exportReportBtn" class="btn btn-outline">📥 Export Audit Report</button>
+      </div>
+    </div>
+
+    <!-- Main Checklist Grid -->
+    <main class="audit-grid" id="auditChecklist">
+      <!-- Injected dynamically via app.js -->
+    </main>
+
+    <!-- Verified Partner Program & Hardening Solutions -->
+    <section class="partner-card">
+      <div class="partner-header">
+        <span class="badge-partner">RECOMMENDED SECURITY STACK</span>
+        <h2>Verified Partner Privacy & Defense Tools</h2>
+        <p>Curated solutions for enterprise-grade privacy and backup without bloatware.</p>
+      </div>
+      <div class="partner-grid">
+        <div class="partner-item">
+          <div class="partner-icon">🛡️</div>
+          <div class="partner-info">
+            <h4>AdGuard System-Wide Ad & Tracker Blocker</h4>
+            <p>Blocks invasive telemetry, encrypted DNS leaks, and in-app ads at the network kernel level.</p>
+          </div>
+          <a href="https://adguard.com" target="_blank" rel="noopener noreferrer" class="partner-link">Learn More →</a>
+        </div>
+        <div class="partner-item">
+          <div class="partner-icon">🔒</div>
+          <div class="partner-info">
+            <h4>Malwarebytes Anti-Exploit & Zero-Day Shield</h4>
+            <p>Real-time memory anomaly detection and ransomware rollback protection for Windows.</p>
+          </div>
+          <a href="https://malwarebytes.com" target="_blank" rel="noopener noreferrer" class="partner-link">Learn More →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Autonomous Income Factory Asset #13 • Zero-Capital Open Security Hub</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
